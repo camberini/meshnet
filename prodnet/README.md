@@ -106,13 +106,17 @@ Directional radios that make a point-to-point link are put into bridge mode to s
 
 1. Connect your computer to the ethernet port of the MikroTik device and configure the static IP `192.168.88.100` on the local network interface
 
-1. Connect to `192.168.88.1` and login to the web interface as `admin` without password, upload the `.npk` file and reboot the device, then verify RouterOS is upgraded to the latest
+1. Connect to `192.168.88.1` and login to the web interface as `admin` without password.
+
+1. Select the 'System' tab, select the 'Files' tab, and select the 'browse' button to upload the .npk file.
+
+1. Select 'System' and select 'reboot' tab. After the reboot, verify that RouterOS is upgraded to the latest version.
 
 1. SSH into the device with `ssh admin@192.168.88.1`
 
-1. Ensure the device has fresh configurations, run `/system reset-configuration` if needed
+1. Ensure the device has fresh configurations, run /system reset-configuration if needed
 
-1. Run [sxtsq/sxtsq-ap.rsc](sxtsq/sxtsq-ap.rsc)
+1. Paste these commands into the RouterOS shell: sxtsq/sxtsq-ap.rsc
 
 1. Reboot the device with `/system reboot` and it will acquire the new IP address `192.168.88.2`
 
